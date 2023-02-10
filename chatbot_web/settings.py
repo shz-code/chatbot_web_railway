@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY = os.getenv("SECRET_KEY",default="unsafe-secret-key")
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG')==True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -63,9 +63,10 @@ WSGI_APPLICATION = 'chatbot_web.wsgi.application'
 # Database
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///'+os.path.join('db.sqlite3')
-    )
+     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
