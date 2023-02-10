@@ -1,15 +1,12 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-import dj_database_url
 
-load_dotenv() # load env variables
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECRET_KEY = os.getenv("SECRET_KEY",default="unsafe-secret-key")
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG')
+SECRET_KEY = "django-insecure-yf28rnw^e4^q!(0b87_d%0$%6g4+3x34a5%4h$i_4=c&%g)32g"
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 

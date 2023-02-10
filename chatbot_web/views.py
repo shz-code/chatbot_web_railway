@@ -41,5 +41,4 @@ def bot_response(request):
             msg = msg
         )
         res = chatbot(msg)
-        print(res)
     return JsonResponse({'msg': res}, safe=False)
