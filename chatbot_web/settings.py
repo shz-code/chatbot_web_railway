@@ -6,11 +6,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY = os.getenv("SECRET_KEY",default="unsafe-secret-key")
 SECRET_KEY = "django-insecure-yf28rnw^e4^q!(0b87_d%0$%6g4+3x34a5%4h$i_4=c&%g)32g"
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS =  ['*']
 
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = ['https://chatbot-cse.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
