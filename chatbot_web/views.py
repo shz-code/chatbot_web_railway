@@ -3,6 +3,7 @@ import json
 from django.http import JsonResponse, HttpResponse
 from chatbot_model.response import chatbot
 from conversation.models import User, Conversation
+import nltk
 
 from pathlib import Path
 import os
@@ -14,6 +15,10 @@ def handle_page_not_found(request, exception):
 
 # Create your views here.
 def index(request):
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except:
+        nltk.download("punkt")
     return render(request, "index.html")
 
 def chat_download(request):
