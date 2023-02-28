@@ -156,6 +156,7 @@ form .row i:hover span{
     display: block;
 }
 form .mic_warning{
+    color: var(--text-secondary);
     margin: 1rem 0;
 }
 form .btn{
