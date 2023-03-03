@@ -44,6 +44,5 @@ def chatbot(inp):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
-                break
     else:
-        return "I don't understand what are you saying? Maybe i'm still a dumb :("
+        return "404"

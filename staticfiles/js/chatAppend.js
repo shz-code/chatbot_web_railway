@@ -16,7 +16,7 @@ if(localStorage.getItem("user") === null)
 }
 else username = localStorage.getItem("user");
 document.querySelector(".user_welcome").innerHTML = `Welcome ${username.toUpperCase()}`
-document.querySelector(".greetings").innerHTML = `Hi ${username.toUpperCase()}. I am an under development chatbot of CSE depertment of IUBAT.` 
+document.querySelector(".greetings").innerHTML = `Hi ${username.toUpperCase()}. I am an under development chatbot of CSE depertment of IUBAT. Currently I am going throuh data collection phrase. Ask me all the questions you have!` 
 
 const chatInsert = (type,msg) =>{
     let div = document.createElement("div"),
@@ -30,6 +30,15 @@ const chatInsert = (type,msg) =>{
     div.append(p)
     prevChats.append(div);
     inp.value = "";
+    let allToggles = document.querySelectorAll(".speaker_toggle");
+
+    for(i=0; i< allToggles.length-1 ; i++)
+    {
+        allToggles[i].classList.remove("bx");
+        allToggles[i].classList.remove("bx-volume-mute");
+        allToggles[i].classList.remove("speaker_toggle");
+        allToggles[i].removeAttribute("onclick");
+    }
 }
 
 const chatFetch = (msg) =>{
