@@ -150,6 +150,21 @@
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
         "What did the buffalo say when his son left for college? Bison."
       ]
+    },
+        {
+      "tag": "it society",
+      "patterns": [
+        "Tell about it society",
+        "what is it society",
+        "how does it society work",
+          "how can i join there"
+      ],
+      "responses": [
+        "IT society is a group of 7 wings. Where society member does departmental task.",
+        "IT society is CSE departmental sepecial group",
+        "Every year there is a election, you can join by participate in the electtion"
+      ]
     }
+        
     ]
   }
